@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Bis Borneo</title>
+    <script type="text/javascript" src="js/js-jquery-1.7.2.min.js"></script>
+    
+
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />    
+    <!-- full calendar css-->
+    <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+  <link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+  <link rel="stylesheet" href="css/fullcalendar.css">
+  <link href="css/widgets.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+  <link href="css/xcharts.min.css" rel=" stylesheet"> 
+  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+function limit_checkbox(max,identifier)
+{
+  var checkbox = $("input[name='"+identifier+"[]']");
+  var checked  = $("input[name='"+identifier+"[]']:checked").length;
+  checkbox.filter(':not(:checked)').prop('disabled', checked >= max);
+  
+}
+</script>
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+     
+      
+      <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" 
+                    data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+      <a class="navbar-brand" href="#">
+       <a href="index.html" class="logo"><b>Bis</b> <span class="lite">Borneo</span></a>
+     </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="Index.html">Home</a></li>
+                <li><a href="#">Bantuan</a></li>
+                <li><a href="Index.html">Ulangi Pencarian</a></li>
+                <li><a href="#">About Us</a></li>
+                <li class="dropdown"> 
+                    
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>    
+      <!--header end-->
+    
+<div class="container">
+  <br><br><br><br><br>
+  <h4>Menampilkan Informasi Damri</h4>          
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Contact Person</th>
+        <th>Alamat</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>089693466339</td>
+        <td>Jl parit Bugis Mustika 4</td>
+        <td><a href="https://www.google.co.id/maps/place/Perum+DAMRI+Setasiun+Pontianak/@-0.0408529,109.3466916,16.75z/data=!4m5!3m4!1s0x2e1d59b169281a65:0x700b258e8752998!8m2!3d-0.039938!4d109.3479447" class="">Lihat Peta</a></td>
+    </tbody>
+  </table>
+</div>
+<h4>Pilih Posisi Kursi Anda</h4>
+ <div class="pilihkursi">
+    <br/>
+        <form action="kode.php" method="POST">
+        <div class="btn-group" data-toggle="checkbox" id="kursi1">
+          <label class="btn btn-default">
+                <input type="checkbox" name="check[]" value="x4Fg" onchange="limit_checkbox(4,'check1');"/> S01
+            </label><br><br><br>
+            <label class="btn btn-default">
+                <input type="checkbox" name="check[]" value="f3lo" onchange="limit_checkbox(4,'check');"/> A01
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="w78i" onchange="limit_checkbox(4,'check');"/> A02
+            </label>
+             <label style="margin-left:20px;" class="btn btn-default">
+                <input type="checkbox" name="check[]" value="z90m" onchange="limit_checkbox(4,'check');"/> B01
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="j07i" onchange="limit_checkbox(4,'check');"/> B02
+            </label><br>
+             <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="z90x" onchange="limit_checkbox(4,'check');"/> A03
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="a15t" onchange="limit_checkbox(4,'check');"/> A04
+            </label>
+             <label style="margin-left:20px;" class="btn btn-default">
+                <input type="checkbox"name="check[]" value="k04i" onchange="limit_checkbox(4,'check');"/> B03
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="r05k" onchange="limit_checkbox(4,'check');"/> B04
+            </label><br>
+             <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="h72a" onchange="limit_checkbox(4,'check');"/> A05
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="p01w" onchange="limit_checkbox(4,'check');"/> A06
+            </label>
+             <label style="margin-left:20px;" class="btn btn-default">
+                <input type="checkbox"name="check[]" value="m67l" onchange="limit_checkbox(4,'check');"/> B05
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="d35z" onchange="limit_checkbox(4,'check');"/> B06
+            </label><br>
+             <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="x70m" onchange="limit_checkbox(4,'check');"/> A07
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="x47r" onchange="limit_checkbox(4,'check');"/> A08
+            </label>
+             <label style="margin-left:20px;" class="btn btn-default">
+                <input type="checkbox"name="check[]" value="g71p" onchange="limit_checkbox(4,'check');"/> B07
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="m90f" onchange="limit_checkbox(4,'check');"/> B08
+            </label><br>
+             <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="g56p" onchange="limit_checkbox(4,'check');"/> A09
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="c40y" onchange="limit_checkbox(4,'check');"/> A10
+            </label>
+             <label style="margin-left:20px;" class="btn btn-default">
+                <input type="checkbox"name="check[]" value="i28d" onchange="limit_checkbox(4,'check');"/> B09
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="r23e" onchange="limit_checkbox(4,'check');"/> B10
+            </label><br>
+             <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="q27p" onchange="limit_checkbox(4,'check');"/> A11
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="q60q" onchange="limit_checkbox(4,'check');"/> A12
+            </label>
+             <label style="margin-left:20px;" class="btn btn-default">
+                <input type="checkbox"name="check[]" value="l39v" onchange="limit_checkbox(4,'check');"/> B11
+            </label>
+            <label class="btn btn-default">
+                <input type="checkbox"name="check[]" value="l39r" onchange="limit_checkbox(4,'check');"/> B12
+            </label><br>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="button-container">
+      <button type="submit" name="next" class="button"><span>Pesan Tiket</span></button>
+  </div>
+</form>
+<!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- charts scripts -->
+    <script src="assets/jquery-knob/js/jquery.knob.js"></script>
+    <script src="js/jquery.sparkline.js" type="text/javascript"></script>
+    <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+    <script src="js/owl.carousel.js" ></script>
+    <!-- jQuery full calendar -->
+    <script src="js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
+  <script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <!--script for this page only-->
+    <script src="js/calendar-custom.js"></script>
+  <script src="js/jquery.rateit.min.js"></script>
+    <!-- custom select -->
+    <script src="js/jquery.customSelect.min.js" ></script>
+  <script src="assets/chart-master/Chart.js"></script>
+   
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+    <!-- custom script for this page-->
+    <script src="js/sparkline-chart.js"></script>
+    <script src="js/easy-pie-chart.js"></script>
+  <script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="js/xcharts.min.js"></script>
+  <script src="js/jquery.autosize.min.js"></script>
+  <script src="js/jquery.placeholder.min.js"></script>
+  <script src="js/gdp-data.js"></script>  
+  <script src="js/morris.min.js"></script>
+  <script src="js/sparklines.js"></script>  
+  <script src="js/charts.js"></script>
+  <script src="js/jquery.slimscroll.min.js"></script>
+  <script>
+
+
+
+
+  </script>
+   <link rel="shortcut icon" href="http://www.clipartbest.com/cliparts/9ip/Rr7/9ipRr76iE.png"/>
+
+  </body>
+</html>

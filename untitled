@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Bis Borneo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="lib/zebra_datepicker.js"></script>
+<link rel="stylesheet" href="lib/css/default.css" />
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ 
+<link href="datepicker/lib/css/default.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+ 
+    <!--external css-->
+    <!-- font icon -->
+
+
+    <!-- owl carousel -->
+
+    <!-- Custom styles -->
+
+    <link href="css/style.css" rel="stylesheet">
+ 
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+   // <![endif]-->
+    <script type="text/javascript">
+        $(document).ready(function(){
+          var tujuan=$("#tujuan").val();
+          var tanggal = $('#tanggal').val();
+
+           $("#button").click(function(){
+               // $.get('3.php',
+               // {'tujuan':tujuan,'tanggal':tanggal}
+               //   ).done(function(data){
+               //     $('p').html(data);
+               //   });      
+               // });
+              alert("hlo");
+         });
+      </script>
+    // <script type="text/javascript">
+    //         $(document).ready(function(){
+                 
+    //              function search(){
+
+    //                   var tujuan=$("#tujuan").val();
+    //                   var tanggal = $('#tanggal').val();
+
+    //                   if(judul!=""){
+    //                     $("#result").html("<img src='img/ajax-loader.gif'/>");
+    //                      $.ajax({
+    //                         type:"get",
+    //                         url:"3.php",
+    //                         data:{tujuan: tujuan, tanggal: tanggal},
+    //                         success:function(data){
+    //                             $('p').html(data);
+    //                             $("#tujuan").val("");
+    //                             $("#tanggal").val("");
+    //                          }
+    //                       });
+    //                   }
+                      
+
+    //              }
+
+    //               $("#button").click(function(){
+    //                  search();
+    //               });
+
+    //               $('#search').keyup(function(e) {
+    //                  if(e.keyCode == 13) {
+    //                     search();
+    //                   }
+    //               });
+    //         });
+        </script>
+
+  </head>
+
+  <body>
+  <!-- container section start -->
+      <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" 
+                    data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+      <a class="navbar-brand" href="#">
+       <a href="index.html" class="logo"><b>Bis</b> <span class="lite">Borneo</span></a>
+     </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="http://localhost/BorneoTraveler/www/">Home</a></li>
+                <li><a href="#">Bantuan</a></li>
+                <li><a href="http://localhost/BorneoTraveler/www/">Ulangi Pencarian</a></li>
+                <li><a href="#">About Us</a></li>
+                <li class="dropdown"> 
+                    
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<p></p>
+    <div class="container">
+<h5>BisBorneo Memudahkan anda dalam perjalanan anda dengan layanan bis dikota Pontianak<br>Naik Bis BisBorneo Aja!!</h5>
+<h3>Cari Tiket Anda Disini</h3>
+</div>
+     <form>
+  <h4>Tujuan</h4>
+  <div id ="show-data">
+    <select name="tujuan" id="tujuan"class="form-control input-md"></select>
+    <script>
+    $(document).ready(function(){
+        var showData = $('#tujuan');
+        var out = "";
+        $.getJSON('http://himastersiskom.hoxty.com/sibagus/json_tujuan.php', function(data) {
+          for(i=0; i<data.length; i++){
+            out += '<option value="'+data[i].tujuan+'">' + data[i].tujuan +'</option>';
+          }
+          showData.html(out);
+        });
+      });
+
+    </script>
+  </div>
+<h4>Waktu Berangkat</h4>
+<div id="time">
+<script>
+    $(document).ready(function(){
+        $('#tanggal').Zebra_DatePicker({
+            format: 'd-F-Y',
+            months : ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],
+            days : ['Minggu','Senin','Selasa','Rabu','Kamis','Jum\'at','Sabtu'],
+            days_abbr : ['Minggu','Senin','Selasa','Rabu','Kamis','Jum\'at','Sabtu']
+        });
+    });
+</script>
+Tanggal<br><input type="text" name="tanggal" id="tanggal" /></div>
+    <div class="container">
+    <div class="button-container">
+      <button id="button" class="button"><span>Cari</span></button>
+</form>
+  </div>
+  
+
+     
+  <!-- container section start -->
+
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+    <script src="lib/zebra_datepicker.js"></script>
+
+  </body>
+</html>
